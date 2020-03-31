@@ -4,6 +4,12 @@
     <p><%= @article.content %></p>
 
         <a href="/articles">Article Index</a>
+        <a href="/articles/<%= @article.id %>/edit">edit this article</a>
+        
+        <form method="POST" action="/articles/<%= @article.id %>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="destroyyyyyyy">
 
+    </form>
     </body>
 </html>
