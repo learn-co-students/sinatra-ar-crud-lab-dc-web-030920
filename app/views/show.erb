@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title: <%= @article.title %></h1>
+    <h2>Content: <%= @article.content %></h2>
+
+    <div>
+        <a href="/articles/<%= @article.id %>/edit">Edit this Article</a>
+        <a href="/articles"> Go back to All Articles </a>
+    </div>
+   <form action="/articles/<%= @article.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete this Article">
+    </form>
+</body>
+</html>
